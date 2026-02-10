@@ -62,7 +62,7 @@ inline void writeSalesmanResult(const std::string& filename, const SalesmanResul
     file << "Elapsed time (s): " << r.elapsed_seconds << "\n";
 }
 
-inline SalesmanResult solveSalesmanBruteforceAllPermutationsNarayan(
+inline SalesmanResult solveSalesmanNarayan(
     const std::vector<std::vector<long long>>& A,
     long long INF = (std::numeric_limits<long long>::max() / 4)
 ) {
@@ -92,7 +92,7 @@ inline SalesmanResult solveSalesmanBruteforceAllPermutationsNarayan(
 
         for (size_t i = 0; i < n; ++i) {
             const size_t from = perm[i];
-            const size_t to   = perm[(i + 1) % n]; // return to start
+            const size_t to   = perm[(i + 1) % n];
             const long long w = A[from - 1][to - 1];
             if (w >= INF) { ok = false; break; }
             cost += w;

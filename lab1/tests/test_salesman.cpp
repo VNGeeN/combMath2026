@@ -10,7 +10,7 @@ TEST_CASE("Salesman: 4-node sample has min cost 80", "[salesman]") {
         {20, 25, 30, 0}
     };
 
-    auto r = solveSalesmanBruteforceAllPermutationsNarayan(A);
+    auto r = solveSalesmanNarayan(A);
 
     REQUIRE(r.min_cost == 80);
     REQUIRE(r.best_perm.size() == 4);

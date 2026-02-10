@@ -18,9 +18,8 @@ int main(int argc, char** argv) {
         const std::string output = (argc >= 3) ? argv[2] : "result.txt";
 
         auto A = readAdjacencyMatrix(input);
-        auto r = solveSalesmanBruteforceAllPermutationsNarayan(A);
+        auto r = solveSalesmanNarayan(A);
 
-        // For batch automation: print time only (seconds) to stdout
         std::cout << r.elapsed_seconds << "\n";
 
         writeSalesmanResult(output, r);
