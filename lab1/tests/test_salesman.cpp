@@ -14,5 +14,5 @@ TEST_CASE("Salesman: 4-node sample has min cost 80", "[salesman]") {
 
     REQUIRE(r.min_cost == 80);
     REQUIRE(r.best_perm.size() == 4);
-    REQUIRE(r.permutations_checked == 24); // 4! = 24
+    REQUIRE(r.permutations_checked == 24);
 }
