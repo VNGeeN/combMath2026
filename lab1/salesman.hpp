@@ -75,7 +75,7 @@ inline SalesmanResult solveSalesmanNarayan(
     perm.reserve(n);
     for (size_t i = 1; i <= n; ++i) perm.push_back(i);
 
-    std::sort(perm.begin(), perm.end());
+    // std::sort(perm.begin(), perm.end());
 
     SalesmanResult best;
     best.min_cost = INF;
@@ -92,9 +92,9 @@ inline SalesmanResult solveSalesmanNarayan(
 
         for (size_t i = 0; i < n; ++i) {
             const size_t from = perm[i];
-            const size_t to   = perm[(i + 1) % n];
+            const size_t to   = perm[(i + 1) % n]; //<-- 
             const long long w = A[from - 1][to - 1];
-            if (w >= INF) { ok = false; break; }
+            // if (w >= INF) { ok = false; break; }
             cost += w;
         }
 
