@@ -2,13 +2,13 @@
 #include "catch.hpp"
 #include "../salesman.hpp"
 
-TEST_CASE("Salesman: 4-node sample has min cost 80", "[salesman]") {
-    std::vector<std::vector<long long>> A = {
+TEST_CASE("Salesman: 4-node sample has min cost 80", "[salesman]")
+{
+    SalesmanMatrix A = {
         {0, 10, 15, 20},
         {10, 0, 35, 25},
         {15, 35, 0, 30},
-        {20, 25, 30, 0}
-    };
+        {20, 25, 30, 0}};
 
     auto r = solveSalesmanNarayan(A);
 
